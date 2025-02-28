@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes pingText {
+    0% {
+        transform: scale(1);
+        opacity: 0; /* Start at 0% opacity */
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1; /* End at 100% opacity */
+    }
+}
+
+.ping-text {
+    display: inline-block; /* Required for scale effect */
+    animation: pingText 3s forwards; /* Run the animation for 2 seconds */
+}
+
+keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+@keyframes example {
+    0%   {background-color: 0; left:80%; top:0px;}
+   
+    100% {background-color: 0; left:0px; top:0px;}
+}
+.c {
+    animation-timing-function: linear;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+
+   
+.p1 {
+    border-style: solid;
+    border-bottom-color: #ff0000;
+} 
+
+
+
+@keyframes pingText {
+    0% {
+        transform: scale(1);
+        opacity: 0; /* Start at 0% opacity */
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1; /* End at 100% opacity */
+    }
+}
+
+.ping-text2 {
+   /* display: inline-block; /* Required for scale effect */
+    animation: pingText 3s forwards; /* Run the animation for 2 seconds */
+}
