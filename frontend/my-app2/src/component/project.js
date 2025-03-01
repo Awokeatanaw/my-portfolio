@@ -6,8 +6,9 @@ const Project = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const backendUrl = process.env.REACT_APP_BACKEND_URL || "https://my-portfolio-production-b408.up.railway.app";
   useEffect(() => {
-    fetch("http://localhost:8000/portfolio/projects/")
+    fetch(`${backendUrl}/portfolio/projects/`)
       .then((response) => response.json())
       .then((data) => {
         setProjects(data);
