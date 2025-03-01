@@ -15,7 +15,7 @@ const Project = () => {
         console.log("Image URL:", projects.image);
       })
       .catch((error) => console.error("Error fetching projects:", error));
-  }, []);
+  }, [projects.image]);
 
   if (loading) {
     return <div className="text-center text-xl font-bold mt-10">Loading...</div>;
