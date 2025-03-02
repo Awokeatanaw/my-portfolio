@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
       <p className='md:ml-20 ml-8'>continue learning and growing in the ever-evolving tech landscape.</p>
       <div className='mt-10 mb-4'>
       <Link to="/contact">
-            <button className="ml-8 md:ml-20 bg-coral rounded-full text-white py-2 px-6 transition-transform transform hover:scale-105">
+            <button className="ml-8 mb-60 md:ml-20 bg-coral rounded-full text-white py-2 px-6 transition-transform transform hover:scale-105">
                 Contact Me
             </button>
         </Link>
