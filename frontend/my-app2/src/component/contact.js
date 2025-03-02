@@ -23,7 +23,8 @@ const Contactme = () => {
     setSuccess(null);
 
     try {
-      const response = await fetch("http://localhost:8000/portfolio/contacts/", {
+      const backendUrl = process.env.REACT_APP_BACKEND_URL || "https://my-portfolio-production-b408.up.railway.app";
+      const response = await fetch(`${backendUrl}/portfolio/contacts/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
