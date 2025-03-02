@@ -95,6 +95,10 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # Default Primary Key
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://my-portfolio-production-b408.up.railway.app',
+]
+
 # CORS Settings
 CORS_ALLOW_ALL_ORIGINS = True
 # If you prefer to use specific allowed origins, comment the above line and use:

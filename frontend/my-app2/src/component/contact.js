@@ -24,6 +24,7 @@ const Contactme = () => {
 
     try {
       const backendUrl = process.env.REACT_APP_BACKEND_URL || "https://my-portfolio-production-b408.up.railway.app";
+      console.log(backendUrl);
       const response = await fetch(`${backendUrl}/portfolio/contacts/`, {
         method: "POST",
         headers: {
