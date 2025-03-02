@@ -11,7 +11,12 @@ SECRET_KEY = os.getenv("SECRET_KEY", "django-insecure-58))%me_z*4ilz@*3g^z==s^@-
 # Debug mode (False in production)
 DEBUG = os.getenv("DEBUG", "True") == "True"
 
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",") if os.getenv("ALLOWED_HOSTS") else []
+# ALLOWED_HOSTS - include your Railway backend domain, your custom domain, and your Netlify domain.
+# If the ALLOWED_HOSTS environment variable is set, it will be used; otherwise, these defaults will be used.
+ALLOWED_HOSTS = os.getenv(
+    "ALLOWED_HOSTS", 
+    "my-portfolio-production-b408.up.railway.app,awokeat.com,awoke-portfolio.netlify.app"
+).split(",")
 
 # Installed Apps
 INSTALLED_APPS = [
@@ -92,7 +97,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS Settings
 CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOWED_ORIGINS = [
-    "https://awoke-portfolio.netlify.app",
-    "http://localhost:3000",
-]
+# If you prefer to use specific allowed origins, comment the above line and use:
+#CORS_ALLOWED_ORIGINS = [
+#   "https://awoke-portfolio.netlify.app",
+#  "http://localhost:3000",
+#]
