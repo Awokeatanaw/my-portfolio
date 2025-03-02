@@ -49,7 +49,7 @@ const Contactme = () => {
   return (
     <div className="ping-text2 bg-lightGray">
       <p className='c absolute md:text-[250px] text-[120px] text-white ml-4 mt-0 z-[-2]'>GETME</p>
-      <p className="ml-48 text-3xl font-bold pt-10 mb-5">contact me</p>
+      <p className="text-center text-3xl font-bold pt-10 mb-5">contact me</p>
     <div className="max-w-4xl bg-white mx-auto p-6 rounded-lg shadow-lg flex flex-col md:flex-row gap-6">
       
       <div className="md:w-2/3">
