@@ -20,7 +20,7 @@ import { Link } from 'react-router-dom';
         </Link>
         <a href="https://www.linkedin.com/feed/?trk=onboarding-landing" target="_blank">
     <button className="ml-10 md:ml-20 bg-coral rounded-full text-white py-2 px-6 transition-transform transform hover:scale-105">
-        know me
+        know me more
     </button>
 </a>
       </div>
