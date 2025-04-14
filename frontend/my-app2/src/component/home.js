@@ -18,7 +18,7 @@ import { Link } from 'react-router-dom';
                 Contact Me
             </button>
         </Link>
-        <a href="https://www.linkedin.com/feed/?trk=onboarding-landing" target="_blank">
+        <a href="https://www.linkedin.com/in/awoke-atanaw-6671a9360/" target="_blank">
     <button className="ml-10 md:ml-20 bg-coral rounded-full text-white py-2 px-6 transition-transform transform hover:scale-105">
         know me more
     </button>
