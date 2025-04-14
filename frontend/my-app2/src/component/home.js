@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
       <p className='text-5xl pt-28 ml-8 md:ml-20 font-bold'>Hello</p>
       <p className='text-5xl mt-5 ml-8 md:ml-20 font-bold'>I'm <strong className='text-teal-600'>Awoke</strong></p>
       <p className='text-2xl mt-4 ml-8 md:ml-20'>Web Developer</p>
-      <p className='md:ml-20 ml-8'> I'm Awoke, a passionate web developer and a 4th-year Software Engineering student. I specialize </p>
+      <p className='md:ml-20 ml-8'> I'm Awoke, a passionate web developer . I specialize </p>
       <p className='md:ml-20 ml-8'>in building dynamic and responsive user interfaces using React and Tailwind CSS for the frontend, while </p>
       <p className='md:ml-20 ml-8'>leveraging Django for robust backend development. With a keen interest in creating seamless user </p>
       <p className='md:ml-20 ml-8'>experiences, I enjoy tackling challenging projects that push my skills and creativity. I'm excited to</p>

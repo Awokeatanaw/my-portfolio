@@ -8,24 +8,14 @@ import myImage from "../image/image1.jpg"; // Import your image
       
       <p className='p1 text-4xl mt-16 md:ml-20 font-bold ml-8'>About me</p>
       
-      <p className=' md:ml-20 ml-8 pt-4'>Hello! I'm a fourth-year Software Engineering student with a passion </p>
-      <p className='md:ml-20 ml-8'>for web development and a strong foundation in programming My journey</p>
-      <p className=' md:ml-20 ml-8'>began with a C++ course, where I developed my analytical skills and</p>
-      <p className=' md:ml-20 ml-8'>logical thinking. I then progressed to Java, completing both</p>
-      <p className='md:ml-20 ml-8'>basic and advanced courses, which culminated in several projects that </p>
-      <p className=' md:ml-20 ml-8'>solidified my understanding of object-oriented programming.</p>
-      <p className=' md:ml-20 ml-8 pt-6'>My interest in web development sparked when I took courses in HTML, CSS, </p>
-      <p className=' md:ml-20 ml-8'>JavaScript, and PHP. These technologies opened up a world of possibilities</p>
-      <p className=' md:ml-20 ml-8'> for me, allowing me to create dynamic and interactive websites.Following </p>
-      <p className=' md:ml-20 ml-8'> this, I delved into artificial intelligence with Python, enhancing my</p>
-      <p className=' md:ml-20 ml-8'> programming skills and broadening my perspective on technology's</p>
-      <p className=' md:ml-20 ml-8'> potential.</p>
-      <p className=' md:ml-20 ml-8 pt-6'>I found my true passion in web development, particularly with modern </p>
-      <p className=' md:ml-20 ml-8'>frameworks. I specialize in using <strong className='text-teal-600'>React</strong> and<strong className='text-teal-600'> TailwindCSS</strong> for the frontend, </p>
-      <p className=' md:ml-20 ml-8'>paired with <strong className='text-teal-600'>Django</strong> for the backend.  I am proficient in HTML, CSS, </p>
-      <p className=' md:ml-20 ml-8'>JavaScript, and Python, with a strong command of the frameworks React, </p>
-      <p className=' md:ml-20 ml-8'>Tailwind CSS, and Django. I thrive on creating user-friendly and </p>
-      <p className='md:ml-20 ml-8'>efficient web applications that make a difference.</p>
+      <p className=' md:ml-20 ml-8 pt-4'> Hello! I am a passionate web developer with a strong programming background. My journey</p>
+      <p className='md:ml-20 ml-8'>started with a C++ course, where I developed analytical and logical skills. I then advanced to</p>
+      <p className=' md:ml-20 ml-8'>Java, completing both basic and advanced courses that reinforced my grasp of object-</p>
+      <p className=' md:ml-20 ml-8'>oriented programming through hands-on projects. My true passion lies in web</p>
+      <p className='md:ml-20 ml-8'>development, especially with modern frameworks. I specialize in using React and </p>
+      <p className=' md:ml-20 ml-8'>TailwindCSS for the frontend, along with Django for the backend. Proficient in HTML, CSS,</p>
+      <p className=' md:ml-20 ml-8 pt-6'>JavaScript, and Python, I enjoy crafting user-friendly and efficient web applications. I thrive </p>
+      <p className=' md:ml-20 ml-8'>on creating impactful solutions that enhance user experiences.</p>
       <p className='md:ml-20 ml-8'></p>
       
       </div>
