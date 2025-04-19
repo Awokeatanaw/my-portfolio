@@ -3,7 +3,7 @@ import myImage from "../image/image1.jpg"; // Import your image
  function Aboutme() {
   return (
     <div className='ping-text bg-lightGray w-full md:flex md:justify-between md:space-x-4 p-4'>
-      <p className='c absolute md:text-[250px] text-[150px] text-white ml-1 mt-0 z-[-2]'>ABOUTME</p>
+      <p className='c absolute md:text-[250px] text-[100px] text-white ml-1 mt-0 z-[-2]'>ABOUTME</p>
       <div className='md:w-[64%]'>
       
       <p className='p1 text-4xl mt-16 md:ml-20 font-bold ml-8'>About me</p>

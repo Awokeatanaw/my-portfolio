@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
  function Home() {
   return (
     <div className='ping-text bg-lightGray w-full'>
-        <p className='c absolute text-[150px] md:text-[250px] text-white md:ml-96 ml-1 mt-28 md:mt-20 z-[-2]'>HOME</p>
+        <p className='c absolute text-[100px] md:text-[250px] text-white md:ml-96 ml-1 mt-28 md:mt-20 z-[-2]'>HOME</p>
       <p className='text-5xl pt-28 ml-8 md:ml-20 font-bold'>Hello</p>
       <p className='text-5xl mt-5 ml-8 md:ml-20 font-bold'>I'm <strong className='text-teal-600'>Awoke</strong></p>
       <p className='text-2xl mt-4 ml-8 md:ml-20'>Web Developer</p>
