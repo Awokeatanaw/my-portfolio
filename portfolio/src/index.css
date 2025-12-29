@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #fdf4ff; /* Your hero/about background color */
+  @apply font-sans antialiased text-gray-800;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth; /* ← This enables smooth scrolling */
+}
