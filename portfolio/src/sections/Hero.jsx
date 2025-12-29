@@ -1,4 +1,3 @@
-// src/sections/Hero.jsx — FINAL HERO WITH YOUR FULL NAME
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail } from 'lucide-react';
 
@@ -6,7 +5,12 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col justify-center items-center px-6 md:px-10 lg:px-16 pt-24 md:pt-28 overflow-hidden bg-white"
+      className="
+        relative min-h-screen flex flex-col justify-center items-center
+        px-6 md:px-10 lg:px-16 2xl:px-24
+        pt-24 md:pt-28
+        overflow-hidden bg-white
+      "
     >
       {/* Subtle decorative elements */}
       <div className="absolute inset-0 -z-10">
@@ -19,9 +23,13 @@ export default function Hero() {
         initial={{ opacity: 0, y: 60 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
-        className="relative text-center max-w-5xl mx-auto"
+        className="
+          relative text-center
+          max-w-5xl 2xl:max-w-7xl
+          mx-auto
+        "
       >
-        {/* Your Name - Prominent & Beautiful */}
+        {/* Name */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -29,11 +37,14 @@ export default function Hero() {
           className="mb-8"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800">
-            Hi, I'm <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent font-extrabold">Awoke Atanaw</span>
+            Hi, I'm{" "}
+            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent font-extrabold">
+              Awoke Atanaw
+            </span>
           </h2>
         </motion.div>
 
-        {/* Headline - Gradient Title */}
+        {/* Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -52,20 +63,33 @@ export default function Hero() {
           transition={{ delay: 0.8, duration: 1 }}
           className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-10"
         >
-          I build modern, scalable,<br className="hidden sm:inline" /> and secure web applications<br className="hidden sm:inline" /> using React, Node.js, Express, and MongoDB.
+          I build modern, scalable,
+          <br className="hidden sm:inline" />
+          and secure web applications
+          <br className="hidden sm:inline" />
+          using React, Node.js, Express, and MongoDB.
         </motion.h2>
 
-        {/* Short Intro */}
+        {/* Intro */}
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.1, duration: 1 }}
-          className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto mb-16 leading-relaxed"
+          className="
+            text-base sm:text-lg md:text-xl lg:text-2xl
+            text-gray-600
+            max-w-4xl 2xl:max-w-5xl
+            mx-auto
+            mb-16
+            leading-relaxed
+          "
         >
-          I specialize in developing e-commerce platforms, job portals, and management systems with clean UI, strong backend logic, and real-world features like authentication and payment integration.
+          I specialize in developing e-commerce platforms, job portals, and
+          management systems with clean UI, strong backend logic, and real-world
+          features like authentication and payment integration.
         </motion.p>
 
-        {/* Call to Action Buttons */}
+        {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -85,9 +109,6 @@ export default function Hero() {
             Contact Me
           </a>
         </motion.div>
-
-        {/* Social Icons */}
-       
       </motion.div>
     </section>
   );
