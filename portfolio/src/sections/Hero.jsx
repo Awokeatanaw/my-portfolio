@@ -7,38 +7,28 @@ export default function Hero() {
       id="home"
       className="
         relative min-h-screen flex flex-col justify-center items-center
-        px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-32 3xl:px-48
-        pt-24 md:pt-28
+        px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 2xl:px-32 3xl:px-48 4xl:px-64
+        pt-24 md:pt-28 lg:pt-32
         overflow-hidden bg-white
+        w-full
       "
     >
-      {/* Subtle decorative elements — scale for huge screens */}
-      <div className="absolute inset-0 -z-10">
-        <div className="
-          absolute top-0 right-0
-          w-96 h-96 sm:w-[500px] sm:h-[500px] md:w-[600px] md:h-[600px]
-          lg:w-[800px] lg:h-[800px] xl:w-[1000px] xl:h-[1000px] 2xl:w-[1200px] 2xl:h-[1200px] 3xl:w-[1400px] 3xl:h-[1400px]
-          bg-gradient-to-br from-purple-300/20 to-pink-300/20 rounded-full blur-3xl
-          translate-x-32 -translate-y-32
-        " />
-        <div className="
-          absolute bottom-0 left-0
-          w-96 h-96 sm:w-[500px] sm:h-[500px] md:w-[600px] md:h-[600px]
-          lg:w-[800px] lg:h-[800px] xl:w-[1000px] xl:h-[1000px] 2xl:w-[1200px] 2xl:h-[1200px] 3xl:w-[1400px] 3xl:h-[1400px]
-          bg-gradient-to-tr from-purple-400/20 to-pink-400/20 rounded-full blur-3xl
-          -translate-x-32 translate-y-32
-        " />
+      {/* Subtle decorative elements - scaled for large screens */}
+      <div className="absolute inset-0 -z-10 w-full h-full">
+        <div className="absolute top-0 right-0 w-96 h-96 md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px] xl:w-[1000px] xl:h-[1000px] 2xl:w-[1200px] 2xl:h-[1200px] bg-gradient-to-br from-purple-300/20 to-pink-300/20 rounded-full blur-3xl translate-x-32 -translate-y-32" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px] xl:w-[1000px] xl:h-[1000px] 2xl:w-[1200px] 2xl:h-[1200px] bg-gradient-to-tr from-purple-400/20 to-pink-400/20 rounded-full blur-3xl -translate-x-32 translate-y-32" />
       </div>
 
-      {/* Main Content — full width on huge screens */}
+      {/* Main Content - Center aligned and max width controlled */}
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
         className="
           relative text-center
-          w-full max-w-none
-          px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-20
+          w-full
+          max-w-5xl lg:max-w-6xl xl:max-w-7xl 2xl:max-w-8xl 3xl:max-w-9xl 4xl:max-w-[1920px]
+          mx-auto
         "
       >
         {/* Name */}
@@ -46,10 +36,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 1 }}
-          className="mb-8"
+          className="mb-6 sm:mb-8 lg:mb-10 xl:mb-12"
         >
           <h2 className="
-            text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl
+            text-3xl sm:text-4xl md:text-5xl 
+            lg:text-6xl xl:text-7xl 2xl:text-8xl 3xl:text-9xl
             font-bold text-gray-800
           ">
             Hi, I'm{" "}
@@ -65,8 +56,9 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
           className="
-            text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl
-            font-extrabold mb-6
+            text-4xl sm:text-5xl md:text-6xl 
+            lg:text-7xl xl:text-8xl 2xl:text-9xl 3xl:text-[10rem]
+            font-extrabold mb-6 lg:mb-8 xl:mb-10 2xl:mb-12
           "
         >
           <span className="bg-gradient-to-r from-purple-600 via-purple-500 to-pink-600 bg-clip-text text-transparent">
@@ -80,15 +72,21 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 1 }}
           className="
-            text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl
-            font-bold text-gray-900 leading-tight mb-10
+            text-2xl sm:text-3xl md:text-4xl 
+            lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl
+            font-bold text-gray-900 leading-tight 
+            mb-8 sm:mb-10 lg:mb-12 xl:mb-16 2xl:mb-20
           "
         >
-          I build modern, scalable,
-          <br className="hidden sm:inline" />
-          and secure web applications
-          <br className="hidden sm:inline" />
-          using React, Node.js, Express, and MongoDB.
+          <span className="block mb-4 lg:mb-6">
+            I build modern, scalable,
+          </span>
+          <span className="block mb-4 lg:mb-6">
+            and secure web applications
+          </span>
+          <span className="block">
+            using React, Node.js, Express, and MongoDB.
+          </span>
         </motion.h2>
 
         {/* Intro */}
@@ -97,12 +95,15 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.1, duration: 1 }}
           className="
-            text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl
+            text-base sm:text-lg md:text-xl 
+            lg:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl
             text-gray-600
-            max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl
+            w-full
+            max-w-3xl sm:max-w-4xl md:max-w-5xl 
+            lg:max-w-6xl xl:max-w-7xl 2xl:max-w-8xl
             mx-auto
-            mb-16
-            leading-relaxed
+            mb-12 sm:mb-16 lg:mb-20 xl:mb-24 2xl:mb-32
+            leading-relaxed lg:leading-loose xl:leading-loose
           "
         >
           I specialize in developing e-commerce platforms, job portals, and
@@ -110,21 +111,25 @@ export default function Hero() {
           features like authentication and payment integration.
         </motion.p>
 
-        {/* CTA Buttons */}
+        {/* CTA Buttons - Scaled for large screens */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.4, duration: 1 }}
-          className="flex flex-col sm:flex-row gap-6 justify-center mb-20"
+          className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 xl:gap-10 justify-center mb-16 sm:mb-20 lg:mb-24 xl:mb-32"
         >
           <a
             href="#projects"
             className="
-              px-10 py-5 md:px-12 md:py-6 lg:px-16 lg:py-7 xl:px-20 xl:py-8
-              text-lg md:text-xl lg:text-2xl xl:text-3xl
-              font-bold text-white rounded-full
-              bg-gradient-to-r from-purple-600 to-pink-600
-              shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300
+              px-8 py-4 sm:px-10 sm:py-5 
+              lg:px-12 lg:py-6 xl:px-14 xl:py-7 2xl:px-16 2xl:py-8
+              text-base sm:text-lg md:text-xl 
+              lg:text-2xl xl:text-3xl
+              font-bold text-white 
+              rounded-full 
+              bg-gradient-to-r from-purple-600 to-pink-600 
+              shadow-xl hover:shadow-2xl hover:scale-105 
+              transition-all duration-300
             "
           >
             View Projects
@@ -132,47 +137,20 @@ export default function Hero() {
           <a
             href="#contact"
             className="
-              px-10 py-5 md:px-12 md:py-6 lg:px-16 lg:py-7 xl:px-20 xl:py-8
-              text-lg md:text-xl lg:text-2xl xl:text-3xl
-              font-bold text-purple-600 rounded-full
-              border-4 border-purple-600
-              hover:bg-purple-600 hover:text-white transition-all duration-300
+              px-8 py-4 sm:px-10 sm:py-5 
+              lg:px-12 lg:py-6 xl:px-14 xl:py-7 2xl:px-16 2xl:py-8
+              text-base sm:text-lg md:text-xl 
+              lg:text-2xl xl:text-3xl
+              font-bold text-purple-600 
+              rounded-full 
+              border-2 sm:border-3 lg:border-4 
+              border-purple-600 
+              hover:bg-purple-600 hover:text-white 
+              transition-all duration-300
             "
           >
             Contact Me
           </a>
-        </motion.div>
-
-        {/* Social Icons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.7, duration: 0.8 }}
-          className="flex justify-center gap-8 lg:gap-12"
-        >
-          {[
-            { Icon: Github, href: "https://github.com/Awokeatanaw", label: "GitHub" },
-            { Icon: Linkedin, href: "https://www.linkedin.com/in/awoke-atanaw-6671a9360", label: "LinkedIn" },
-            { Icon: Mail, href: "mailto:awokeatanaw12@gmail.com", label: "Email" },
-          ].map(({ Icon, href, label }, i) => (
-            <a
-              key={i}
-              href={href}
-              target={href.startsWith("http") || href.startsWith("mailto") ? "_blank" : undefined}
-              rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-              aria-label={label}
-              className="
-                p-5 md:p-6 lg:p-8 xl:p-10
-                bg-white rounded-full shadow-lg
-                hover:shadow-2xl hover:scale-110 transition-all duration-300 group
-              "
-            >
-              <Icon className="
-                w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-14 xl:h-14
-                text-purple-600 group-hover:text-purple-700
-              " />
-            </a>
-          ))}
         </motion.div>
       </motion.div>
     </section>
