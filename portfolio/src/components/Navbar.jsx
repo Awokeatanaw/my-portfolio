@@ -1,4 +1,3 @@
-// src/components/Navbar.jsx — FINAL, ELEGANT NAVBAR
 import { Menu, X, Mail, Github, Linkedin } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -13,8 +12,13 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg shadow-sm border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-        {/* Logo */}
+      {/* 
+        max-w-7xl → normal screens
+        2xl:max-w-none → huge screens (full width)
+        2xl:px-16 → edge spacing on large displays
+      */}
+      <div className="max-w-7xl 2xl:max-w-none mx-auto px-6 2xl:px-16 py-5 flex items-center justify-between">
+        {/* Logo (LEFT EDGE on huge screens) */}
         <a href="#home" className="flex items-center gap-4 group">
           <div className="p-3 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow">
             <code className="text-white text-2xl font-bold">&lt;/&gt;</code>
@@ -24,17 +28,19 @@ export default function Navbar() {
           </h1>
         </a>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation (RIGHT EDGE on huge screens) */}
         <nav className="hidden md:flex items-center gap-10">
-          {["Home", "About", "Skills", "Projects", "Experience", "Contact"].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase().replace(" ", "")}`}
-              className={linkClass}
-            >
-              {item}
-            </a>
-          ))}
+          {["Home", "About", "Skills", "Projects", "Experience", "Contact"].map(
+            (item) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase().replace(" ", "")}`}
+                className={linkClass}
+              >
+                {item}
+              </a>
+            )
+          )}
 
           {/* Social Icons */}
           <div className="flex items-center gap-5 ml-8 pl-8 border-l border-gray-200">
@@ -85,16 +91,18 @@ export default function Navbar() {
           className="md:hidden bg-white border-t border-gray-100 shadow-2xl"
         >
           <div className="px-6 py-8 space-y-6">
-            {["Home", "About", "Skills", "Projects", "Experience", "Contact"].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase().replace(" ", "")}`}
-                className={`${linkClass} block text-xl`}
-                onClick={handleLinkClick}
-              >
-                {item}
-              </a>
-            ))}
+            {["Home", "About", "Skills", "Projects", "Experience", "Contact"].map(
+              (item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase().replace(" ", "")}`}
+                  className={`${linkClass} block text-xl`}
+                  onClick={handleLinkClick}
+                >
+                  {item}
+                </a>
+              )
+            )}
 
             <div className="pt-6 border-t border-gray-200">
               <p className="text-sm text-gray-500 mb-4">Connect with me</p>
@@ -105,10 +113,16 @@ export default function Navbar() {
                 >
                   <Mail className="w-6 h-6" />
                 </a>
-                <a href="https://github.com/Awokeatanaw" className="text-gray-600">
+                <a
+                  href="https://github.com/Awokeatanaw"
+                  className="text-gray-600"
+                >
                   <Github className="w-7 h-7" />
                 </a>
-                <a href="https://linkedin.com/in/yourusername" className="text-gray-600">
+                <a
+                  href="https://linkedin.com/in/yourusername"
+                  className="text-gray-600"
+                >
                   <Linkedin className="w-7 h-7" />
                 </a>
               </div>
