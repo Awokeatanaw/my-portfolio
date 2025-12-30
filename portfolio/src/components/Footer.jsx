@@ -1,11 +1,11 @@
-// src/components/Footer.jsx
 import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-950 text-gray-300 py-16"> {/* REMOVED mt-32 */}
-      <div className="max-w-7xl mx-auto px-6 md:px-8">
+    <footer className="bg-gray-950 text-gray-300 py-16">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 2xl:px-32">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+
           {/* Left: Logo + Description */}
           <div className="space-y-6">
             <div className="flex items-center gap-4">
@@ -26,7 +26,7 @@ export default function Footer() {
               {["About Me", "Projects", "Skills", "Contact"].map((link) => (
                 <li key={link}>
                   <a
-                    href={`#${link.toLowerCase().replace(" ", "")}`}
+                    href={`#${link.toLowerCase().replace(/\s+/g, "")}`}
                     className="text-lg text-gray-400 hover:text-purple-400 transition-colors duration-300 font-medium"
                   >
                     {link}
@@ -45,20 +45,23 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-4 bg-gray-800 rounded-2xl hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-600 hover:shadow-2xl transition-all duration-300 group"
+                aria-label="GitHub"
               >
                 <Github className="w-7 h-7 text-gray-300 group-hover:text-white" />
               </a>
               <a
-                href="www.linkedin.com/in/awoke-atanaw-6671a9360"
+                href="https://www.linkedin.com/in/awoke-atanaw-6671a9360"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-4 bg-gray-800 rounded-2xl hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-600 hover:shadow-2xl transition-all duration-300 group"
+                aria-label="LinkedIn"
               >
                 <Linkedin className="w-7 h-7 text-gray-300 group-hover:text-white" />
               </a>
               <a
                 href="mailto:awokeatanaw12@gmail.com"
                 className="p-4 bg-gray-800 rounded-2xl hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-600 hover:shadow-2xl transition-all duration-300 group"
+                aria-label="Email"
               >
                 <Mail className="w-7 h-7 text-gray-300 group-hover:text-white" />
               </a>
@@ -67,6 +70,7 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Bottom copyright */}
         <div className="pt-10 border-t border-gray-800 text-center">
           <p className="text-gray-500 text-base md:text-lg">
             © {new Date().getFullYear()} All rights reserved. Made with{" "}
