@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import myphoto from '../assets/myphoto.jpg';
-import { Database, Server, Code, Smartphone } from 'lucide-react';
+import { motion } from "framer-motion";
+import myphoto from "../assets/myphoto.jpg";
+import { Database, Server, Code, Smartphone } from "lucide-react";
 
 export default function About() {
   const competencies = [
@@ -11,37 +11,45 @@ export default function About() {
   ];
 
   const stats = [
-    { 
-      value: "2+", 
-      label: "Years Experience", 
+    {
+      value: "2+",
+      label: "Years Experience",
       icon: <Code className="w-12 h-12 text-white" />,
-      iconBg: "bg-gradient-to-br from-indigo-500 to-indigo-600"
+      iconBg: "bg-gradient-to-br from-indigo-500 to-indigo-600",
     },
-    { 
-      value: "6+", 
-      label: "Projects Completed", 
+    {
+      value: "6+",
+      label: "Projects Completed",
       icon: <Server className="w-12 h-12 text-white" />,
-      iconBg: "bg-gradient-to-br from-purple-500 to-purple-600"
+      iconBg: "bg-gradient-to-br from-purple-500 to-purple-600",
     },
-    { 
-      value: "15+", 
-      label: "Technologies", 
+    {
+      value: "15+",
+      label: "Technologies",
       icon: <Database className="w-12 h-12 text-white" />,
-      iconBg: "bg-gradient-to-br from-pink-500 to-pink-600"
+      iconBg: "bg-gradient-to-br from-pink-500 to-pink-600",
     },
-    { 
-      value: "", 
-      label: "Reliable Project Delivery", 
+    {
+      value: "",
+      label: "Reliable Project Delivery",
       icon: <Smartphone className="w-12 h-12 text-white" />,
-      iconBg: "bg-gradient-to-br from-cyan-500 to-cyan-600"
+      iconBg: "bg-gradient-to-br from-cyan-500 to-cyan-600",
     },
   ];
 
   const tags = ["MERN Stack", "Django", "PostgreSQL"];
 
   return (
-    <section id="about" className="py-16 px-6 md:py-24 lg:py-32 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section
+      id="about"
+      className="
+        w-full bg-white overflow-hidden
+        py-16 md:py-24 lg:py-32
+        px-6 md:px-10 lg:px-16 2xl:px-32 3xl:px-40
+      "
+    >
+      {/* FULL-WIDTH CONTAINER */}
+      <div className="w-full max-w-[1600px] 3xl:max-w-[1800px] mx-auto">
         {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -54,16 +62,16 @@ export default function About() {
           </h2>
         </motion.div>
 
-        {/* Main Layout - Equal Height Columns */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
-          {/* Left: Text, Tags & Stats */}
+        {/* MAIN GRID */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 2xl:gap-32 items-stretch">
+          {/* LEFT SIDE */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9 }}
             className="flex flex-col justify-between space-y-12"
           >
-            {/* Introduction Text */}
+            {/* TEXT — UNCHANGED */}
             <div className="text-center lg:text-left">
               <div className="space-y-6 text-gray-700 text-base md:text-lg lg:text-xl leading-relaxed">
                 <p>
@@ -77,12 +85,12 @@ export default function About() {
                 </p>
               </div>
 
-              {/* Skill Tags */}
+              {/* TAGS */}
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start mt-10">
                 {tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-8 py-4 bg-gradient-to-r from-purple-50 to-pink-50 text-purple-700 font-semibold rounded-full shadow-lg hover:shadow-xl transition-shadow"
+                    className="px-8 py-4 bg-gradient-to-r from-purple-50 to-pink-50 text-purple-700 font-semibold rounded-full shadow-lg"
                   >
                     {tag}
                   </span>
@@ -90,7 +98,7 @@ export default function About() {
               </div>
             </div>
 
-            {/* Stats - 2x2 Grid */}
+            {/* STATS */}
             <div className="grid grid-cols-2 gap-8">
               {stats.map((stat, index) => (
                 <motion.div
@@ -98,9 +106,9 @@ export default function About() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ delay: index * 0.1 }}
-                  className="text-center group"
+                  className="text-center"
                 >
-                  <div className={`inline-flex p-6 rounded-3xl ${stat.iconBg} shadow-xl group-hover:scale-110 transition-transform mb-4`}>
+                  <div className={`inline-flex p-6 rounded-3xl ${stat.iconBg} shadow-xl mb-4`}>
                     {stat.icon}
                   </div>
                   <h4 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-2">
@@ -112,44 +120,40 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* Right: Decorated Photo + Competencies */}
+          {/* RIGHT SIDE */}
           <motion.div
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9 }}
             className="flex flex-col items-center lg:items-start"
           >
-            {/* Decorated Photo */}
-            <div className="relative group mb-8 lg:mb-12">
-              {/* Outer glow ring */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-purple-400/30 to-pink-400/30 blur-3xl group-hover:blur-4xl transition-all duration-700 -z-10" />
-              
-              {/* Inner gradient border */}
-              <div className="relative p-1 bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl">
+            {/* PHOTO */}
+            <div className="relative mb-10 lg:mb-12">
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-purple-400/30 to-pink-400/30 blur-3xl -z-10" />
+              <div className="p-1 bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl">
                 <div className="bg-white rounded-3xl p-2">
                   <img
                     src={myphoto}
                     alt="Awoke Atanaw"
-                    className="w-72 md:w-80 lg:w-96 rounded-3xl object-cover shadow-inner"
+                    className="w-72 md:w-80 lg:w-96 2xl:w-[420px] rounded-3xl object-cover"
                   />
                 </div>
               </div>
-
-              {/* Hover tilt effect */}
-              <div className="absolute inset-0 rounded-3xl group-hover:-rotate-3 group-hover:scale-105 transition-transform duration-700 pointer-events-none" />
             </div>
 
-            {/* Compact Core Competencies */}
+            {/* COMPETENCIES */}
             <div className="w-full max-w-lg bg-white rounded-3xl shadow-2xl p-6 md:p-8 border border-purple-100">
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center lg:text-left">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
                 Core Competencies
               </h3>
               <div className="space-y-4">
                 {competencies.map((comp, index) => (
                   <div key={index}>
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-base md:text-lg font-medium text-gray-800">{comp.name}</span>
-                      <span className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                      <span className="text-base md:text-lg font-medium text-gray-800">
+                        {comp.name}
+                      </span>
+                      <span className="text-xl font-bold text-purple-600">
                         {comp.percentage}%
                       </span>
                     </div>
