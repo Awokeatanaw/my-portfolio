@@ -1,9 +1,9 @@
-import { motion } from 'framer-motion';
-import { Github, ExternalLink, CheckCircle } from 'lucide-react';
-import ecommerceImg from '../assets/ecomerce.png';
-import jobportalImg from '../assets/jobportal.png';
-import adminDashboardImg from '../assets/admindashboard.png';
-import librarymanagementImg from '../assets/librarymanagement.png'; // ← Add this image
+import { motion } from "framer-motion";
+import { Github, ExternalLink, CheckCircle } from "lucide-react";
+import ecommerceImg from "../assets/ecomerce.png";
+import jobportalImg from "../assets/jobportal.png";
+import adminDashboardImg from "../assets/admindashboard.png";
+import librarymanagementImg from "../assets/librarymanagement.png";
 
 const projects = [
   {
@@ -95,8 +95,11 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 px-6 md:py-28 lg:py-32 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section
+      id="projects"
+      className="py-20 md:py-28 lg:py-32 px-6 md:px-10 lg:px-16 2xl:px-24 3xl:px-32 bg-white"
+    >
+      <div className="mx-auto max-w-7xl 2xl:max-w-[1600px] 3xl:max-w-[1900px]">
         {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -104,16 +107,16 @@ export default function Projects() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16 md:mb-24"
         >
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 bg-gradient-to-r from-gray-900 via-purple-900 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl 3xl:text-8xl font-black mb-6 bg-gradient-to-r from-gray-900 via-purple-900 to-purple-600 bg-clip-text text-transparent">
             Featured Projects
           </h2>
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl lg:text-2xl 3xl:text-3xl text-gray-600 max-w-3xl 3xl:max-w-5xl mx-auto">
             Real-world applications built with scalable architecture and modern technologies
           </p>
         </motion.div>
 
         {/* Projects */}
-        <div className="space-y-24 md:space-y-32">
+        <div className="space-y-24 md:space-y-32 3xl:space-y-36">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -121,43 +124,43 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className={`grid lg:grid-cols-2 gap-12 lg:gap-20 items-center ${
-                index % 2 === 1 ? 'lg:grid-cols-2' : ''
+                index % 2 === 1 ? "lg:grid-cols-2" : ""
               }`}
             >
               {/* Image */}
-              <div className={`order-1 ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+              <div className={`order-1 ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                 <div className="relative group">
                   <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-purple-400/20 to-pink-400/20 blur-3xl -z-10 group-hover:blur-4xl transition-all duration-700" />
-                  <div className="relative bg-white rounded-3xl shadow-2xl p-8 md:p-12 overflow-hidden border border-purple-100">
+                  <div className="relative bg-white rounded-3xl shadow-2xl p-8 md:p-12 3xl:p-16 overflow-hidden border border-purple-100">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full max-h-96 object-contain rounded-2xl group-hover:scale-105 transition-transform duration-700"
+                      className="w-full h-full max-h-96 3xl:max-h-[500px] object-contain rounded-2xl group-hover:scale-105 transition-transform duration-700"
                     />
                   </div>
                 </div>
               </div>
 
               {/* Content */}
-              <div className={`order-2 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                <div className="space-y-8">
+              <div className={`order-2 ${index % 2 === 1 ? "lg:order-1" : ""}`}>
+                <div className="space-y-8 3xl:space-y-10">
                   <div>
-                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-4">
+                    <h3 className="text-3xl md:text-4xl lg:text-5xl 3xl:text-6xl font-black text-gray-900 mb-4">
                       {project.title} <span className="inline-block ml-3">{project.emoji}</span>
                     </h3>
-                    <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+                    <p className="text-gray-600 text-base md:text-lg lg:text-xl 3xl:text-2xl leading-relaxed">
                       {project.description}
                     </p>
                   </div>
 
                   {/* Key Features */}
                   <div>
-                    <h4 className="text-xl md:text-2xl font-bold text-gray-800 mb-5">Key Features</h4>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <h4 className="text-xl md:text-2xl 3xl:text-3xl font-bold text-gray-800 mb-5">Key Features</h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 3xl:gap-6">
                       {project.features.map((feature) => (
                         <div key={feature} className="flex items-center gap-3">
-                          <CheckCircle className="w-6 h-6 text-purple-600 flex-shrink-0" />
-                          <span className="text-gray-700">{feature}</span>
+                          <CheckCircle className="w-6 h-6 3xl:w-7 3xl:h-7 text-purple-600 flex-shrink-0" />
+                          <span className="text-gray-700 3xl:text-lg">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -165,12 +168,12 @@ export default function Projects() {
 
                   {/* Tech Stack */}
                   <div>
-                    <h4 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">Tech Stack</h4>
-                    <div className="flex flex-wrap gap-3">
+                    <h4 className="text-xl md:text-2xl 3xl:text-3xl font-bold text-gray-800 mb-4">Tech Stack</h4>
+                    <div className="flex flex-wrap gap-3 3xl:gap-4">
                       {project.tech.map((tech) => (
                         <span
                           key={tech}
-                          className="px-5 py-2 bg-gradient-to-r from-purple-50 to-pink-50 text-purple-700 rounded-full font-medium shadow-sm hover:shadow-md transition-shadow"
+                          className="px-5 py-2 3xl:px-6 3xl:py-3 bg-gradient-to-r from-purple-50 to-pink-50 text-purple-700 rounded-full font-medium shadow-sm hover:shadow-md transition-shadow 3xl:text-lg"
                         >
                           {tech}
                         </span>
@@ -184,18 +187,18 @@ export default function Projects() {
                       href={project.codeLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 px-8 py-4 rounded-full border-2 border-purple-600 text-purple-600 font-bold hover:bg-purple-50 transition-all"
+                      className="flex items-center gap-3 px-8 py-4 3xl:px-10 3xl:py-5 rounded-full border-2 border-purple-600 text-purple-600 font-bold hover:bg-purple-50 transition-all"
                     >
-                      <Github className="w-6 h-6" />
+                      <Github className="w-6 h-6 3xl:w-7 3xl:h-7" />
                       View Code
                     </a>
                     <a
                       href={project.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold hover:shadow-xl transition-all"
+                      className="flex items-center gap-3 px-8 py-4 3xl:px-10 3xl:py-5 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold hover:shadow-xl transition-all"
                     >
-                      <ExternalLink className="w-6 h-6" />
+                      <ExternalLink className="w-6 h-6 3xl:w-7 3xl:h-7" />
                       Live Demo
                     </a>
                   </div>
@@ -207,7 +210,7 @@ export default function Projects() {
 
         {/* More Projects */}
         <div className="text-center mt-20 md:mt-28">
-          <p className="text-lg md:text-xl text-gray-600">
+          <p className="text-lg md:text-xl 3xl:text-2xl text-gray-600">
             Explore more of my work on{" "}
             <a
               href="https://github.com/Awokeatanaw"

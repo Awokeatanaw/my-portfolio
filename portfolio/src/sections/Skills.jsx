@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const skillGroups = [
   {
@@ -30,9 +30,9 @@ const skillGroups = [
       "Express.js",
       "Django",
       "RESTful API Development",
-      "WebSockets (Real-time Communication)",
+      "WebSockets",
       "JWT Authentication",
-      "Payment Integration (Stripe API, Chapa API)",
+      "Payment Integration",
     ],
   },
   {
@@ -50,11 +50,10 @@ const skillGroups = [
     skills: [
       "Git & GitHub",
       "Docker",
-      "AWS (EC2, S3 – basics)",
+      "AWS (Basics)",
       "Postman",
       "VS Code",
-      "Deployment (Vercel, Netlify, Render)",
-      "Environment Configuration (.env)",
+      "Vercel / Netlify / Render",
     ],
   },
   {
@@ -62,72 +61,111 @@ const skillGroups = [
     icon: "<>",
     iconBg: "from-emerald-400 to-emerald-600",
     badgeBg: "bg-emerald-50 text-emerald-700 border border-emerald-200",
-    skills: ["JavaScript", "Python", "C++", "Java", "HTML / CSS", "SQL", "Bash (Shell Scripting Basics)"],
+    skills: ["JavaScript", "Python", "C++", "Java", "SQL", "Bash"],
   },
   {
     title: "Other",
     icon: "🌐",
     iconBg: "from-orange-400 to-orange-600",
     badgeBg: "bg-orange-50 text-orange-700 border border-orange-200",
-    skills: [
-      "Agile/Scrum",
-      "RESTful Design",
-      "Authentication",
-      "Testing",
-      "Optimization",
-    ],
+    skills: ["Agile", "RESTful Design", "Authentication", "Testing", "Optimization"],
   },
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 px-6 md:py-24 lg:py-32 bg-white">
-      <div className="max-w-7xl mx-auto">
-        {/* Title */}
+    <section
+      id="skills"
+      className="
+        bg-white
+        py-20 md:py-24 lg:py-32
+        px-6 md:px-10 lg:px-16 2xl:px-24 3xl:px-32
+      "
+    >
+      {/* Container grows ONLY on huge screens */}
+      <div className="mx-auto max-w-7xl 2xl:max-w-[1600px] 3xl:max-w-[1900px]">
+        {/* TITLE */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16 md:mb-20"
         >
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 bg-gradient-to-r from-gray-900 via-purple-900 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl 3xl:text-8xl font-black mb-6 bg-gradient-to-r from-gray-900 via-purple-900 to-purple-600 bg-clip-text text-transparent">
             Technical Skills
           </h2>
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl lg:text-2xl 3xl:text-3xl text-gray-600 max-w-3xl 3xl:max-w-4xl mx-auto">
             Comprehensive expertise across modern web development technologies
           </p>
         </motion.div>
 
-        {/* Skill Groups Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16">
+        {/* GRID */}
+        <div
+          className="
+            grid
+            grid-cols-1
+            md:grid-cols-2
+            lg:grid-cols-3
+            2xl:grid-cols-4
+            gap-10 lg:gap-16 3xl:gap-20
+          "
+        >
           {skillGroups.map((group, index) => (
             <motion.div
               key={group.title}
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: index * 0.1 }}
+              transition={{ duration: 0.7, delay: index * 0.08 }}
               viewport={{ once: true }}
               className="group"
             >
-              <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 p-10 text-center border border-gray-100">
-                {/* Icon */}
+              <div
+                className="
+                  bg-white rounded-3xl
+                  shadow-lg hover:shadow-2xl
+                  transition-all duration-500
+                  p-10 3xl:p-14
+                  text-center
+                  border border-gray-100
+                "
+              >
+                {/* ICON */}
                 <div
-                  className={`w-24 h-24 mx-auto mb-8 rounded-3xl bg-gradient-to-br ${group.iconBg} flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-500`}
+                  className={`
+                    w-24 h-24 3xl:w-28 3xl:h-28
+                    mx-auto mb-8
+                    rounded-3xl
+                    bg-gradient-to-br ${group.iconBg}
+                    flex items-center justify-center
+                    shadow-xl
+                    group-hover:scale-110
+                    transition-transform duration-500
+                  `}
                 >
-                  <span className="text-5xl text-white">{group.icon}</span>
+                  <span className="text-5xl 3xl:text-6xl text-white">
+                    {group.icon}
+                  </span>
                 </div>
 
-                {/* Title */}
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
+                {/* TITLE */}
+                <h3 className="text-2xl md:text-3xl 3xl:text-4xl font-bold text-gray-900 mb-8">
                   {group.title}
                 </h3>
 
-                {/* Skill Badges */}
+                {/* SKILLS */}
                 <div className="flex flex-wrap gap-4 justify-center">
                   {group.skills.map((skill) => (
                     <span
                       key={skill}
-                      className={`px-6 py-3 ${group.badgeBg} rounded-full font-semibold text-sm md:text-base shadow-sm hover:shadow-md transition-shadow`}
+                      className={`
+                        px-6 py-3 3xl:px-8 3xl:py-4
+                        ${group.badgeBg}
+                        rounded-full
+                        font-semibold
+                        text-sm md:text-base 3xl:text-lg
+                        shadow-sm hover:shadow-md
+                        transition-shadow
+                      `}
                     >
                       {skill}
                     </span>
