@@ -48,7 +48,7 @@ export default function About() {
         px-6 md:px-10 lg:px-16 2xl:px-24 3xl:px-32
       "
     >
-      <div className="w-full max-w-[1700px] mx-auto">
+      <div className="w-full max-w-[1700px] 2xl:max-w-[1900px] 3xl:max-w-[2200px] mx-auto">
         {/* TITLE */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -83,7 +83,7 @@ export default function About() {
             </div>
 
             {/* TAGS */}
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 3xl:gap-6">
               {tags.map((tag) => (
                 <span
                   key={tag}
@@ -101,7 +101,7 @@ export default function About() {
             </div>
 
             {/* STATS */}
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-2 gap-8 3xl:gap-12">
               {stats.map((stat, index) => (
                 <motion.div
                   key={index}
@@ -110,13 +110,13 @@ export default function About() {
                   transition={{ delay: index * 0.1 }}
                   className="text-center"
                 >
-                  <div className={`inline-flex p-6 rounded-3xl ${stat.iconBg} shadow-xl mb-4`}>
+                  <div className={`inline-flex p-6 3xl:p-8 rounded-3xl ${stat.iconBg} shadow-xl mb-4`}>
                     {stat.icon}
                   </div>
-                  <h4 className="text-4xl md:text-5xl font-black text-purple-600 mb-2">
+                  <h4 className="text-4xl md:text-5xl 3xl:text-6xl font-black text-purple-600 mb-2">
                     {stat.value}
                   </h4>
-                  <p className="text-gray-600 font-medium">{stat.label}</p>
+                  <p className="text-gray-600 font-medium 3xl:text-lg">{stat.label}</p>
                 </motion.div>
               ))}
             </div>
@@ -137,14 +137,14 @@ export default function About() {
                   <img
                     src={myphoto}
                     alt="Awoke Atanaw"
-                    className="w-72 md:w-80 lg:w-96 3xl:w-[440px] rounded-3xl object-cover"
+                    className="w-72 md:w-80 lg:w-96 2xl:w-[420px] 3xl:w-[500px] rounded-3xl object-cover"
                   />
                 </div>
               </div>
             </div>
 
             {/* CORE COMPETENCIES — UNDER PHOTO */}
-            <div className="w-full max-w-lg bg-white rounded-3xl shadow-2xl p-8 3xl:p-10 border border-purple-100">
+            <div className="w-full max-w-lg 2xl:max-w-xl 3xl:max-w-2xl bg-white rounded-3xl shadow-2xl p-8 3xl:p-12 border border-purple-100">
               <h3 className="text-2xl md:text-3xl 3xl:text-4xl font-bold text-gray-900 mb-6">
                 Core Competencies
               </h3>
@@ -159,7 +159,7 @@ export default function About() {
                         {comp.percentage}%
                       </span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                    <div className="w-full bg-gray-200 rounded-full h-3 3xl:h-4 overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: `${comp.percentage}%` }}
